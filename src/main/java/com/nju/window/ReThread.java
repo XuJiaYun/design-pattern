@@ -1,8 +1,8 @@
 package com.nju.window;
 
 public class ReThread extends Thread {
-    MainJpanel mainJpanel;
-    public ReThread(MainJpanel mainJpanel){
+    MyPanel mainJpanel;
+    public ReThread(MyPanel mainJpanel){
         this.mainJpanel=mainJpanel;
     }
     @Override

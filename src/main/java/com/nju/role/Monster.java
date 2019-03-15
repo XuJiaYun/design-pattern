@@ -2,7 +2,7 @@ package com.nju.role;
 
 import java.awt.*;
 
-public abstract class Role {
+public abstract class Monster {
     private String name;
     private int attack;
     private int defend;
@@ -10,11 +10,17 @@ public abstract class Role {
     private Image img;
     int local_x;
     int local_y;
-    int width = 50;
-    int height = 50;
+    private int width = 50;
+    private int height = 50;
     public void attack(){
         System.out.println(name+"造成"+attack+"点伤害");
     }
+
+    public Monster(int local_x, int local_y) {
+        this.local_x = local_x;
+        this.local_y = local_y;
+    }
+
     public abstract void draw();
 
     public String getName() {

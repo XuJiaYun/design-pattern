@@ -11,7 +11,7 @@ public class MyPlayerDirector implements PlayerDirector{
         Weapon weapon = builder.buildWeapon();
         Armour armour = builder.buildArmour();
 
-        Player player = new Player();
+        Player player = new Player(400,200);
         player.setAttack(weapon.getAttackPoint());
         player.setDefend(armour.getDefendPoint());
         return player;

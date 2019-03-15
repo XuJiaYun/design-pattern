@@ -1,52 +1,25 @@
 package com.nju.role;
 
-import com.nju.util.GameUtil;
-
 import java.awt.*;
 
-public class Player implements Role{
+public class Player extends Role{
     private String name;
+    private int width = 50;
+    private int height = 50;
     private int attack;
     private int defend;
     private int life;
     private Weapon weapon;
     private Armour armour;
-    private Image img = GameUtil.getImage("/Users/ywh/IdeaProjects/alpha/src/main/resources/Pictures/Player.jpg");
+    private String img;
 
-    public void attack() {
-        System.out.println("造成"+attack+"点伤害");
+    public Player(int local_x, int local_y) {
+        this.local_x = local_x;
+        this.local_y = local_y;
     }
 
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAttack() {
-        return attack;
-    }
-
-    public void setAttack(int attack) {
-        this.attack = attack;
-    }
-
-    public int getDefend() {
-        return defend;
-    }
-
-    public void setDefend(int defend) {
-        this.defend = defend;
-    }
-
-    public Image getImg() {
-        return img;
-    }
-
-    public void setImg(Image img) {
-        this.img = img;
+    @Override
+    public void draw() {
+        setImg(Toolkit.getDefaultToolkit().getImage("/Users/ywh/IdeaProjects/alpha/src/main/resources/Pictures/Player.png"));
     }
 }
